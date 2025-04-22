@@ -1,0 +1,46 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navigation Bar Styling */
+.navbar {
+    background-color: #333;
+    padding: 1rem;
+    text-align: left;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Responsive Navigation Styling */
+@media (max-width: 768px) {
+    .navbar {
+        text-align: center;
+    }
+    
+    .navbar a {
+        display: block;
+        margin: 10px 0;
+    }
+}

@@ -7,3 +7,12 @@ from django.http import HttpResponse
 
 def home(request):
     return render(request, 'main/home.html')
+
+def timeline(request):
+    return render(request, 'timeline.html')
+
+def projects(request):
+    return render(request, 'projects.html')
+
+def resume(request):
+    return render(request, 'resume.html')
