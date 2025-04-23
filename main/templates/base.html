@@ -10,14 +10,16 @@
 <body>
 
     <!-- Navigation Bar (Component) -->
-    <nav>
-        <ul>
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'timeline' %}">Timeline</a></li>
-            <li><a href="{% url 'projects' %}">Projects</a></li>
-            <li><a href="{% url 'resume' %}">Resume</a></li>
-        </ul>
-    </nav>
+    <nav class="navbar">
+        <div class="nav-left">
+          <a href="/">Home</a>
+        </div>
+        <div class="nav-right">
+          <a href="/experience">Experience</a>
+          <a href="/projects">Projects</a>
+          <a href="/resume">Resume</a>
+        </div>
+      </nav>
 
     <!-- Main Content -->
     <div id="content">
@@ -25,11 +27,6 @@
         <!-- This will be filled in by other pages -->
         {% endblock %}
     </div>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Jackson Hayward. All rights reserved.</p>
-    </footer>
 
 </body>
 </html>

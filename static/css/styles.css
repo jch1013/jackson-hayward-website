@@ -15,9 +15,17 @@ body {
 
 /* Navigation Bar Styling */
 .navbar {
-    background-color: #333;
+    background-color: gray;
     padding: 1rem;
     text-align: left;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
 }
 
 .navbar a {
@@ -44,3 +52,45 @@ body {
         margin: 10px 0;
     }
 }
+
+.hero {
+    display: flex;
+    align-items: center; /* Centers the content vertically */
+    justify-content: center; /* Centers everything horizontally */
+    padding: 4rem 2rem;
+    gap: 3rem;
+  }
+  
+  .hero-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .hero-text {
+    max-width: 600px;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero-image img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  
