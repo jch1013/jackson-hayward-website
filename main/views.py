@@ -16,3 +16,12 @@ def projects(request):
 
 def resume(request):
     return render(request, 'resume.html')
+
+def about_me(request):
+    return render(request, 'about_me.html')
+
+def experience(request):
+    return render(request, 'experiences.html')
+
+def projects(request):
+    return render(request, 'projects.html')
