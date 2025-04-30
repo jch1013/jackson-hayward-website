@@ -13,10 +13,10 @@ def projects(request):
     return render(request, 'projects.html')
 
 # About me view
-def about_me(request):
+def experience(request):
     timeline_items = TimelineItem.objects.all()
-    return render(request, 'about_me.html', {'timeline_items': timeline_items})
+    return render(request, 'experiences.html', {'timeline_items': timeline_items})
 
 # Experience view
-def experience(request):
-    return render(request, 'experiences.html')
+def about_me(request):
+    return render(request, 'about_me.html')

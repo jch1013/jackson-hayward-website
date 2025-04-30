@@ -1,7 +1,25 @@
 {% extends "base.html" %}
+{% load static %}
+
 
 {% block content %}
-  <h1>My Journey</h1>
-  <p>where to start?</p>
-  <p>reverse chronological?</p>
+<div class="timeline">
+  {% for item in timeline_items %}
+    <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-date">{{ item.year }}</div>
+          <div class="timeline-message-image">
+              <div class="timeline-text">
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.description }}</p>
+              </div>
+              <div class="timeline-img">
+                  <img src="{{ item.image.url }}" alt="Jackson's Graduation Photo">
+              </div>
+          </div>
+        </div>
+    </div>
+  {% endfor %}
+</div>
+
 {% endblock %}
