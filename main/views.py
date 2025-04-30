@@ -14,8 +14,6 @@ def timeline(request):
 def projects(request):
     return render(request, 'projects.html')
 
-def resume(request):
-    return render(request, 'resume.html')
 
 def about_me(request):
     return render(request, 'about_me.html')
