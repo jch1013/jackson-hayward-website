@@ -42,7 +42,7 @@ body {
 }
 
 /* Responsive Navigation Styling */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .navbar {
         text-align: center;
     }
@@ -82,7 +82,7 @@ body {
     color: #666;
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     .hero {
       flex-direction: column;
       text-align: center;
@@ -93,4 +93,125 @@ body {
       height: 220px;
     }
   }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: auto;
+  }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 20px;
+    max-width: 1000px;
+    width: 85%;
+  }
+  
+  .timeline-item {
+    display: block; 
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+    align-self: flex-start;
+    transform: translateX(-40px);
+  }
+  
+  .timeline-item:nth-child(even) {
+    align-self: flex-end;
+    transform: translateX(40px);
+  }
+  
+  
+  .timeline-content {
+    background: #f1f1f1;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .timeline-date {
+    position: static;
+    display: inline-block;
+    margin: 0;
+    color: gray;
+    width: auto;
+    height: auto;
+    font-size: 1rem;
+    margin-bottom: 10px; 
+}
+  
+  .timeline-message-image {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .timeline-item:nth-child(even) .timeline-message-image {
+    flex-direction: row-reverse;
+  }
+  
+  .timeline-text {
+    flex: 1;
+  }
+  
+  .timeline-img img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+@media (max-width: 768px) {
+    .timeline-item {
+        transform: none !important;
+        align-self: center;
+    }
+}
+
+@media (max-width: 600px) {
+  .timeline {
+      padding: 0;
+      margin: 20px;
+  }
+
+  .timeline-item {
+      display: block; 
+      margin-bottom: 20px;
+      position: relative;
+  }
+
+
+  .timeline-content {
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+  }
+
+  .timeline-item h3 {
+      font-size: 1.2rem;
+      color: #333;
+  }
+
+  .timeline-item p {
+      color: #666;
+      font-size: 0.9rem;
+  }
+
+  .timeline-item .timeline-message-image {
+    flex-direction: column-reverse !important;
+  }
+}
+
   
