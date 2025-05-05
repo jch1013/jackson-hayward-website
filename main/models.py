@@ -12,3 +12,14 @@ class TimelineItem(models.Model):
 
     def __str__(self):
         return f"{self.year} - {self.title}"
+    
+
+# Create a project card model
+class Project(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    image = models.ImageField(upload_to='project_images/')
+    github_link = models.URLField(max_length=200, null=True, blank=True)  # Optional field for GitHub link
+
+    def __str__(self):
+        return self.title

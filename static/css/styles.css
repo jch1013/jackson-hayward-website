@@ -214,4 +214,96 @@ body {
   }
 }
 
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
   
+  .carousel-track-container {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card {
+    min-width: 33.33%;
+    box-sizing: border-box;
+    padding: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-image img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .carousel-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px;
+    color: #333;
+  }
+  
+
+  
+.project-card {
+    width: 400px;
+    height: 75vh;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    padding: 16px;
+    margin: 16px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .project-image img {
+    width: 60%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .project-title {
+    font-size: 1.2em;
+    margin: 12px 0 6px;
+    text-align: center;
+  }
+  
+  .project-description {
+    font-size: 0.95em;
+    text-align: center;
+    color: #333;
+  }
+  
+  .project-link {
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+  }
+  
+  .project-link:hover {
+    text-decoration: underline;
+  }
+  
+
+

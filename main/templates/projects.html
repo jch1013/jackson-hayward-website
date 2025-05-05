@@ -1,5 +1,72 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>these be me projects</h1>
+<div class="carousel">
+  <button class="carousel-btn prev">‹</button>
+
+  <div class="carousel-track-container">
+    <div class="carousel-track">
+      {% for project in project_items %}
+        <div class="project-card">
+          <div class="project-image">
+            <img src="{{ project.image.url }}" alt="Project Image">
+          </div>
+          <div class="project-details">
+            <h3 class="project-title">{{ project.title }}</h3>
+            <p class="project-description">{{ project.description }}</p>
+            {% if project.github_link %}
+              <a href="{{ project.github_link }}" class="project-link" target="_blank">View on GitHub</a>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <button class="carousel-btn next">›</button>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const prevButton = document.querySelector('.carousel-btn.prev');
+    const nextButton = document.querySelector('.carousel-btn.next');
+    const carouselTrack = document.querySelector('.carousel-track');
+    const projectCards = document.querySelectorAll('.project-card');
+    const cardWidth = projectCards[0].offsetWidth + 20; // Adjust this margin if needed
+
+    // Ensure the track starts at 0
+    carouselTrack.style.transform = 'translateX(0px)';
+
+    // Move to the next card
+    nextButton.addEventListener('click', () => {
+      carouselTrack.style.transition = 'transform 0.5s ease';
+      carouselTrack.style.transform = `translateX(-${cardWidth}px)`;
+
+      carouselTrack.addEventListener('transitionend', handleNextTransition, { once: true });
+    });
+
+    function handleNextTransition() {
+      carouselTrack.style.transition = 'none';
+      carouselTrack.appendChild(carouselTrack.firstElementChild); // Move first to end
+      carouselTrack.style.transform = 'translateX(0px)';
+
+      // Force reflow to allow transition next time
+      void carouselTrack.offsetWidth;
+      carouselTrack.style.transition = 'transform 0.5s ease';
+    }
+
+    // Move to the previous card
+    prevButton.addEventListener('click', () => {
+      carouselTrack.style.transition = 'none';
+      carouselTrack.insertBefore(carouselTrack.lastElementChild, carouselTrack.firstElementChild); // Move last to start
+      carouselTrack.style.transform = `translateX(-${cardWidth}px)`;
+
+      // Force reflow
+      void carouselTrack.offsetWidth;
+      carouselTrack.style.transition = 'transform 0.5s ease';
+      carouselTrack.style.transform = 'translateX(0px)';
+    });
+  });
+</script>
+
 {% endblock %}
