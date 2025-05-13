@@ -3,5 +3,16 @@
 
 
 {% block content %}
-<h1>about me!</h1>
+<h2>My Hobbies</h2>
+<ul>
+  {% for hobby in hobbies_items %}
+    <li>
+      {% if hobby.icon %}
+        <i class="{{ hobby.icon }}"></i>
+      {% endif %}
+      <strong>{{ hobby.name }}</strong>: {{ hobby.description }}
+    </li>
+  {% endfor %}
+</ul>
+
 {% endblock %}
