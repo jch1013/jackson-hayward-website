@@ -1,2 +1,6 @@
 # jackson-hayward-website
-This repository contains the code for my personal portfolio website, built with Django. The site showcases my technical skills, including full-stack development with Python, Django, and front-end technologies. It includes sections like my resume, personal projects, and more to give an overview of my journey and interests in technology.
+Hi, I’m Jackson — a passionate software engineer and recent graduate from the University of Pennsylvania's MCIT program. With a background in computer science, AI, and machine learning, I specialize in automating image processing and training AI models.
+
+On this website, you’ll find information about my projects, my professional experience, and some of the things that excite me outside of work, such as mountaineering and astronomy. I’ve built this site to showcase my work and share my journey as I continue to grow in the tech world.
+
+Feel free to explore my portfolio and get in touch if you’d like to collaborate or learn more about what I do!
