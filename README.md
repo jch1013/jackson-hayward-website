@@ -5,5 +5,5 @@ On this website, you’ll find information about my projects, my professional ex
 
 Feel free to explore my portfolio and get in touch if you’d like to collaborate or learn more about what I do!
 
-[Visit my website](http://www.jacksonhayward.com)
+[Visit my website](http://jacksonhayward.com)
 
