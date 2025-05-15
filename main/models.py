@@ -28,8 +28,7 @@ class Project(models.Model):
 class Hobby(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField(blank=True)
-    icon = models.CharField(max_length=50, blank=True)
-    featured = models.BooleanField(default=False)
+    image = models.ImageField(upload_to='hobby_images/')
 
     def __str__(self):
         return self.name

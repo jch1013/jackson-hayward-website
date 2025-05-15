@@ -314,4 +314,69 @@ body {
   }
   
 
-
+  .hobby-gallery {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .hobby-card {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    cursor: pointer;
+  }
+  
+  .hobby-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s;
+    display: block;
+  }
+  
+  .hobby-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    pointer-events: none;
+  }
+  
+  /* Desktop hover/focus */
+  @media (hover: hover) and (pointer: fine) {
+    .hobby-card:hover img,
+    .hobby-card:focus img {
+      filter: brightness(60%);
+    }
+    .hobby-card:hover .hobby-overlay,
+    .hobby-card:focus .hobby-overlay {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+  
+  /* Mobile active (JS will add .active) */
+  .hobby-card.active img {
+    filter: brightness(60%);
+  }
+  .hobby-card.active .hobby-overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  

@@ -4,15 +4,42 @@
 
 {% block content %}
 <h2>My Hobbies</h2>
-<ul>
+<div class="hobby-gallery">
   {% for hobby in hobbies_items %}
-    <li>
-      {% if hobby.icon %}
-        <i class="{{ hobby.icon }}"></i>
-      {% endif %}
-      <strong>{{ hobby.name }}</strong>: {{ hobby.description }}
-    </li>
+    <div class="hobby-card" tabindex="0">
+      <img src="{{ hobby.image.url }}" alt="{{ hobby.name }}">
+      <div class="hobby-overlay">
+        <h3>{{ hobby.name }}</h3>
+        <p>{{ hobby.description }}</p>
+      </div>
+    </div>
   {% endfor %}
-</ul>
+</div>
+
 
 {% endblock %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Only activate on touch devices
+    if (window.matchMedia('(hover: none) and (pointer: coarse)').matches) {
+      document.querySelectorAll('.hobby-card').forEach(function(card) {
+        card.addEventListener('click', function(e) {
+          // Remove active from others
+          document.querySelectorAll('.hobby-card.active').forEach(function(other) {
+            if (other !== card) other.classList.remove('active');
+          });
+          // Toggle active on this card
+          card.classList.toggle('active');
+        });
+        // Optional: close overlay if clicking outside any card
+        document.body.addEventListener('click', function(e) {
+          if (!card.contains(e.target)) {
+            card.classList.remove('active');
+          }
+        });
+      });
+    }
+  });
+  </script>
+  
