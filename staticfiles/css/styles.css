@@ -235,7 +235,7 @@ body {
   }
   
   .project-card {
-    min-width: 33.33%;
+    min-width: 30%;
     box-sizing: border-box;
     padding: 10px;
     transition: transform 0.3s ease;
@@ -274,11 +274,13 @@ body {
   .project-image {
     display: flex;
     justify-content: center;
+    height: 25%;
   }
 
   .project-image img {
-    width: 60%;
     height: auto;
+    width: auto;
+    max-width: 95%;
     border-radius: 8px;
   }
   
@@ -293,12 +295,18 @@ body {
     text-align: center;
     color: #333;
   }
+
+  .project-details {
+    width: 100%;
+  }
   
   .project-link {
     margin-top: 10px;
     text-decoration: none;
     color: #007BFF;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
   }
   
   .project-link:hover {
