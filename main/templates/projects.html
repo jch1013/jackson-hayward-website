@@ -28,11 +28,14 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
+    if (window.innerWidth <= 768) return;
+
     const prevButton = document.querySelector('.carousel-btn.prev');
     const nextButton = document.querySelector('.carousel-btn.next');
     const carouselTrack = document.querySelector('.carousel-track');
     const projectCards = document.querySelectorAll('.project-card');
-    const cardWidth = projectCards[0].offsetWidth + 20; // Adjust this margin if needed
+    const cardWidth = projectCards[1].getBoundingClientRect().left - projectCards[0].getBoundingClientRect().left;
+
 
     // Ensure the track starts at 0
     carouselTrack.style.transform = 'translateX(0px)';

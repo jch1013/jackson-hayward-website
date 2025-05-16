@@ -227,6 +227,7 @@ body {
   .carousel-track-container {
     overflow: hidden;
     width: 100%;
+    margin-bottom: 20px;
   }
   
   .carousel-track {
@@ -260,7 +261,7 @@ body {
   
 .project-card {
     width: 400px;
-    height: 75vh;
+    height: auto;
     border: 2px solid #ccc;
     border-radius: 12px;
     padding: 16px;
@@ -297,11 +298,14 @@ body {
   }
 
   .project-details {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
     width: 100%;
   }
   
   .project-link {
-    margin-top: 10px;
+    margin-top: auto;
     text-decoration: none;
     color: #007BFF;
     font-weight: bold;
@@ -312,6 +316,39 @@ body {
   .project-link:hover {
     text-decoration: underline;
   }
+
+  /* Mobile styles (screens up to 768px wide) */
+@media (max-width: 768px) {
+  .carousel {
+    position: static;
+    overflow: visible;
+  }
+
+  .carousel-track-container {
+    overflow: visible;
+    white-space: normal;
+    padding: 0;
+  }
+
+  .carousel-track {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transform: none !important;
+    transition: none !important;
+    margin-top: 20px;
+  }
+
+  .project-card {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .carousel-btn {
+    display: none; /* Hide arrows */
+  }
+}
+
   
 
   .hobby-gallery {
