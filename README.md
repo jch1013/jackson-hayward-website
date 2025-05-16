@@ -38,9 +38,5 @@ I wanted a space to present my work in a structured, thoughtful way while also l
 ## Contact
 
 📬 Want to connect or collaborate?  
-Feel free to [reach out](mailto:your.email@example.com) or visit my [LinkedIn](https://linkedin.com/in/yourname).
-
-
-
-[Visit my website](http://jacksonhayward.com)
+Find my contact information on [my website](http://jacksonhayward.com)! I'd love to connect
 
